@@ -20,47 +20,41 @@ import backgroundImage from '../assets/img/signin.jpg';
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   email: '',
+  //   password: ''
+  // });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value
+  //   });
+  // };
+  // const axios = require('axios');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      axios.post(apiUrl, requestBody)
-      .then(response => {
-        console.log('Response:', response.data);
-        // Handle the response data here
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        // Handle errors here
-      });
-      console.log('====================================');
-      console.log(response);
-      console.log('====================================');
-      // Note: Since mode is 'no-cors', you won't be able to access response.json() directly
-      // Instead, check response.ok to determine if the request was successful
-      if (response.ok) {
-        // Handle successful login
-        console.log('Login successful');
-      } else {
-        // Handle failed login
-        console.error('Login failed');
-      }
-    } catch (error) {
-      console.error('Error occurred during login:', error);
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     axios.post('http://localhost:8085/api/v1/auth', JSON.stringify(formData), {
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       }
+  //     })
+      
+  //     .then(response => {
+  //       console.log('Response:', response.data);
+  //       // Handle the response data here
+  //     })
+  //     .catch(error => {
+  //       console.error('Error:', error);
+  //       // Handle errors here
+  //     });
+  //   } catch (error) {
+  //     console.error('Error occurred during login:', error);
+  //   }
+  // };
 
 
   return (
